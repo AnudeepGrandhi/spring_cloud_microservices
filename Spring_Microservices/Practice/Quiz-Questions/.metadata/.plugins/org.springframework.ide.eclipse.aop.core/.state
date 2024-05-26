@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="quiz"/>
+<aop-project name="questions"/>
+<aop-project name="cloud-config"/>
+</aop-reference-model>

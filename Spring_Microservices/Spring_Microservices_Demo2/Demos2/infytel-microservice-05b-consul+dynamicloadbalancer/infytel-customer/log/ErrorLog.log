@@ -1,0 +1,20 @@
+05-Aug-2020 18:30:03 ERROR - 404 : [{"timestamp":"2020-08-05T13:00:03.755+00:00","status":404,"error":"Not Found","message":"","path":"/plans/1"}]
+05-Aug-2020 18:33:38 ERROR - 404 : [{"timestamp":"2020-08-05T13:03:38.019+00:00","status":404,"error":"Not Found","message":"","path":"/customers/9009009001/friends"}]
+05-Aug-2020 18:36:05 ERROR - 404 : [{"timestamp":"2020-08-05T13:06:05.042+00:00","status":404,"error":"Not Found","message":"","path":"/plans/1"}]
+05-Aug-2020 18:37:35 ERROR - 404 : [{"timestamp":"2020-08-05T13:07:35.761+00:00","status":404,"error":"Not Found","message":"","path":"/customers/9009009001/friends"}]
+05-Aug-2020 18:39:50 ERROR - I/O error on GET request for "http://localhost:9400/plans/1": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+05-Aug-2020 18:39:57 ERROR - I/O error on GET request for "http://localhost:9400/plans/1": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+05-Aug-2020 18:44:42 ERROR - 404 : [{"timestamp":"2020-08-05T13:14:42.736+00:00","status":404,"error":"Not Found","message":"","path":"/plans/1"}]
+05-Aug-2020 18:45:05 ERROR - I/O error on GET request for "http://localhost:9400/plans/1": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+05-Aug-2020 18:45:16 ERROR - 404 : [{"timestamp":"2020-08-05T13:15:16.252+00:00","status":404,"error":"Not Found","message":"","path":"/plans/1"}]
+05-Aug-2020 19:17:15 ERROR - I/O error on GET request for "http://localhost:9400/plans/1": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+05-Aug-2020 19:18:29 ERROR - 404 : [{"timestamp":"2020-08-05T13:48:29.765+00:00","status":404,"error":"Not Found","message":"","path":"/plans/1"}]
+05-Aug-2020 19:18:35 ERROR - I/O error on GET request for "http://localhost:9400/plans/1": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+05-Aug-2020 19:31:01 ERROR - I/O error on GET request for "http://MyloadBalancer/customers/9009009001/friends": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+05-Aug-2020 19:31:35 ERROR - I/O error on GET request for "http://MyloadBalancer/customers/9009009001/friends": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+05-Aug-2020 19:34:30 ERROR - I/O error on GET request for "http://MyloadBalancer/customers/9009009001/friends": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+05-Aug-2020 19:35:20 ERROR - I/O error on GET request for "http://MyloadBalancer/customers/9009009001/friends": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+05-Aug-2020 19:35:26 ERROR - I/O error on GET request for "http://MyloadBalancer/customers/9009009001/friends": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+05-Aug-2020 19:51:10 ERROR - Key extractor is null
+05-Aug-2020 19:52:57 ERROR - I/O error on GET request for "http://MyloadBalancer/customers/9009009001/friends": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect
+05-Aug-2020 19:54:00 ERROR - I/O error on GET request for "http://MyloadBalancer/customers/9009009001/friends": Connection refused: connect; nested exception is java.net.ConnectException: Connection refused: connect

@@ -1,0 +1,49 @@
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/pages/
+      suffix: .jsp      
+ 
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/db_irs
+
+management:
+  server:
+    servlet:
+      context-path: /InfyGoBoot
+    port: 4343
+  endpoint:
+    env:
+      enabled: true
+    beans:
+      enabled: true
+    mappings:
+      enabled: true
+    health:
+       enabled: true
+    metrics:
+      enabled: true
+           
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+ 
+
+  
+  
+logging:
+  file: Errorlog.log
+  level:
+    root: info
+    com.infoys.ars: info
+  pattern:
+    file: "%d{yyyy-MM-dd HH:mm:ss,SSS} %5p [%t] %c [%M] - %m%n"
+
+endpoints:
+ actuator:
+ 
+  
+    

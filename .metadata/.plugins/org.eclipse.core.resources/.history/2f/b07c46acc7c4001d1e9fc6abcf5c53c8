@@ -1,0 +1,8 @@
+package com.in28minutes.rest.webservices.restwebservices.versioning;
+
+public class PersonV1 {
+	
+	private String name;
+	
+
+}

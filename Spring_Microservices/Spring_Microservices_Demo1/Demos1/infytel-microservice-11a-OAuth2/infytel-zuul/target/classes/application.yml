@@ -1,0 +1,15 @@
+security:
+      oauth2:
+        client:     
+            clientId: 9c63a024454426497d3d1619446ff8bd41891bd2282874b474a047db0496f0ff
+            clientSecret: ddf3362856f39db85d0b9b6048e2df234edd586a93e4505b7b1ad1c17dba7350
+            accessTokenUri: https://infygit.ad.infosys.com/oauth/token
+            userAuthorizationUri: https://infygit.ad.infosys.com/oauth/authorize
+            clientAuthenticationScheme: form
+
+        resource:
+          userInfoUri: https://infygit.ad.infosys.com/api/v3/user 
+          preferTokenInfo: false
+
+server:
+  port: 3333  

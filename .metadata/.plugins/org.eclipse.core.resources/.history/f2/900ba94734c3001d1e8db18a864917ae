@@ -1,0 +1,5 @@
+package com.in28minutes.rest.webservices.restwebservices.exception;
+
+public class CustomizedResponseEntityExceptionHandler {
+
+}

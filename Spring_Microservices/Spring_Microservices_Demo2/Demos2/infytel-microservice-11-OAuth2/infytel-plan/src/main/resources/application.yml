@@ -1,0 +1,25 @@
+security:
+      oauth2:
+        client:     
+            clientId: 8136e46beb2ec8df7ea27084f7803d5e5240e36af4d55e6cfe66333da72b2a99
+            clientSecret: 262375483861c3dae1b60854d49ab89e3df80d775e1baf148d1d745fc0827673
+            accessTokenUri: http://infygit.ad.infosys.com/oauth/token
+            userAuthorizationUri: http://infygit.ad.infosys.com/oauth/authorize
+            clientAuthenticationScheme: form
+
+        resource:
+          userInfoUri: http://infygit.ad.infosys.com/api/v3/user 
+          preferTokenInfo: false
+
+
+
+
+proxy:
+  hostname: 127.0.0.1
+  port: 9400
+  username: itlinfosys\sushma_c
+  password: Myhome@225
+  
+domain: itlinfosys
+useProxy: true
+

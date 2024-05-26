@@ -1,0 +1,78 @@
+package com.in28minutes.rest.webservices.restwebservices.user;
+
+import java.net.URI;
+import java.util.List;
+
+import org.springframework.hateoas.EntityModel;
+import org.springframework.hateoas.server.mvc.WebMvcLinkBuilder;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import jakarta.validation.Valid;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
+
+@RestController
+public class UserResource {
+
+	private UserDaoService userDaoService;
+	
+	public UserResource(UserDaoService userDaoService) {
+		this.userDaoService = userDaoService;
+	}
+	
+	///Get All Users
+	@GetMapping("/users")
+	public List<User> retrieveAllUser() {
+		return userDaoService.findAll();
+	}
+	
+	///Get specific User
+	///HATEOAS - http://localhost:8080/users
+	///EntityModel - We wrap bean in EntityModel to append url links to each bean without changing bean structure.
+	///WebMVCLinkBuilder - To create links based on the method 
+	
+	@GetMapping("/users/{userId}")
+	public EntityModel<User> retrieveUser(@PathVariable Integer userId) {
+		User user = userDaoService.findOne(userId);
+		
+		if(user == null) {
+			throw new UserNotFoundException("Id: "+userId);
+		}
+		
+		EntityModel<User> entityModel = EntityModel.of(user);
+		
+		WebMvcLinkBuilder link = linkTo(methodOn(this.getClass()).retrieveAllUser());
+		entityModel.add(link.withRel("all-users"));
+		
+		return entityModel;
+	}
+	
+	///Delete specific User
+	@DeleteMapping("/users/{userId}")
+	public void removeUser(@PathVariable Integer userId) {
+		userDaoService.removeUser(userId);
+	}
+	
+	///Create New User
+	@PostMapping("/users")
+	public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+		User savedUser = userDaoService.saveUser(user);
+		
+		// /users/4 => /users , /{id} => savedUser.getId()
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest()  ///returns current request path ("/users")
+				.path("/{id}")
+				.buildAndExpand(savedUser.getId()) /////Replaces "/{id}" with created user id.
+				.toUri(); ///converts to location of the new resource(uri)
+		
+		///Always return appropriate response status and the location(uri of the resource) based on the action performed.
+		return ResponseEntity.created(location).build();
+	}
+	
+}

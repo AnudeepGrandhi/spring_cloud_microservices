@@ -1,0 +1,12 @@
+server:
+ port: 9091
+
+spring:
+  application:
+    name: GatewayMS
+  cloud:
+    consul:
+      host: localhost
+  main:
+   allow-bean-definition-overriding: true
+      

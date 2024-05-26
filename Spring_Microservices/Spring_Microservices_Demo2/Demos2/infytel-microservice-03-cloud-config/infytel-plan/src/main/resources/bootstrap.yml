@@ -1,0 +1,24 @@
+server:
+  port: 8400
+
+spring:
+  application:
+    name: PlanMS
+  cloud:
+    consul:
+      host: localhost
+      discovery:
+        hostname: HYDHTC141841L
+      config:
+        fail-fast: false
+        enabled: true
+        prefix: config
+        defaultContext: application
+        data-key: data
+        profileSeparator: '::'
+        format: YAML
+        watch:
+          delay: 100
+      
+
+     

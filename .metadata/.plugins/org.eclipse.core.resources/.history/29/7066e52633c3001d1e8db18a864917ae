@@ -1,0 +1,12 @@
+package com.in28minutes.rest.webservices.restwebservices.exception;
+
+public class ErrorDetails {
+	
+	private LocalDate timestamp;
+	private String message;
+	private String details;
+	
+	
+	
+
+}
